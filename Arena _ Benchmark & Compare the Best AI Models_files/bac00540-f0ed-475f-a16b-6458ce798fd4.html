@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TURIHO — Your Family in Your Pocket. Professional family care and representation services for the Burundian diaspora. We visit, we care, we deliver.">
+    <meta name="keywords" content="TURIHO, Burundi, diaspora, family care, services, Bujumbura, representation">
+    <title>TURIHO — Your Family in Your Pocket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 100 100&#39;&gt;&lt;circle cx=&#39;50&#39; cy=&#39;50&#39; r=&#39;50&#39; fill=&#39;%231a5c2a&#39;/&gt;&lt;text x=&#39;50&#39; y=&#39;62&#39; font-size=&#39;28&#39; font-weight=&#39;bold&#39; text-anchor=&#39;middle&#39; fill=&#39;white&#39; font-family=&#39;Arial&#39;&gt;T&lt;/text&gt;&lt;/svg&gt;">
+    <style>
+        /* ===== CSS RESET & VARIABLES ===== */
+        :root {
+            --green-deep: #1a5c2a;
+            --green-dark: #144922;
+            --green-light: #2d7a3f;
+            --green-pale: #e8f5e9;
+            --gold: #d4a843;
+            --gold-light: #e8c76a;
+            --gold-dark: #b8922e;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --gray-100: #f1f3f5;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul { list-style: none; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--green-deep);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--green-deep);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 1.2rem;
+            font-family: var(--font-heading);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--gray-700);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--green-deep);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--green-deep) !important;
+            color: var(--white) !important;
+            padding: 10px 24px !important;
+            border-radius: 50px !important;
+            font-weight: 600 !important;
+            font-size: 0.9rem !important;
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        .nav-cta:hover {
+            background: var(--green-light) !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .mobile-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--gray-800);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-dark) 40%, #0d3318 100%);
+            padding-top: 72px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(ellipse, rgba(212, 168, 67, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, var(--white), transparent);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--gold-light);
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--gold);
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 520px;
+            margin-bottom: 36px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-body);
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--green-dark);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 168, 67, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-green {
+            background: var(--green-deep);
+            color: var(--white);
+        }
+
+        .btn-green:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26, 92, 42, 0.35);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .phone-mockup {
+            width: 280px;
+            height: 560px;
+            background: var(--white);
+            border-radius: 36px;
+            padding: 12px;
+            box-shadow: var(--shadow-xl), 0 0 80px rgba(212, 168, 67, 0.15);
+            position: relative;
+            z-index: 2;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, var(--green-deep) 0%, var(--green-dark) 100%);
+            border-radius: 26px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .phone-screen .phone-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--green-deep);
+            border: 3px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 1.5rem;
+            font-family: var(--font-heading);
+        }
+
+        .phone-screen h3 {
+            color: var(--white);
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .phone-screen p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.75rem;
+            text-align: center;
+            padding: 0 30px;
+        }
+
+        .phone-features {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .phone-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.08);
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .phone-feature-icon {
+            width: 28px;
+            height: 28px;
+            background: rgba(212, 168, 67, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            box-shadow: var(--shadow-lg);
+            z-index: 3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-card-1 {
+            top: 10%;
+            right: -10%;
+            animation-delay: 0s;
+        }
+
+        .floating-card-2 {
+            bottom: 15%;
+            left: -5%;
+            animation-delay: 2s;
+        }
+
+        .floating-card .card-icon {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+
+        .floating-card .card-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gray-800);
+        }
+
+        .floating-card .card-text {
+            font-size: 0.7rem;
+            color: var(--gray-600);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            padding: 60px 0;
+            background: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--green-deep);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 64px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--gray-900);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: var(--off-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-main {
+            width: 100%;
+            height: 480px;
+            background: linear-gradient(135deg, var(--green-deep), var(--green-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(212, 168, 67, 0.2), transparent);
+        }
+
+        .about-image-main .about-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-image-main h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-image-main p {
+            font-size: 1rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-accent {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 160px;
+            height: 160px;
+            background: var(--gold);
+            border-radius: var(--radius-lg);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--gray-900);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-content > p {
+            color: var(--gray-600);
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+
+        .about-feature {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .about-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--green-pale);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .about-feature h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 4px;
+        }
+
+        .about-feature p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--green-pale);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--green-deep);
+        }
+
+        .service-card:hover .service-icon span {
+            filter: brightness(0) invert(1);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--green-deep);
+        }
+
+        .service-link:hover {
+            gap: 10px;
+            color: var(--gold-dark);
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            background: var(--off-white);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 44px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 2px;
+            background: linear-gradient(to right, var(--green-deep), var(--gold), var(--green-deep));
+            opacity: 0.2;
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--green-deep);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0 auto 24px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(26, 92, 42, 0.3);
+        }
+
+        .step-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-stars span {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--green-deep);
+            font-size: 1rem;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--gray-800);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-location {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+
+        .testimonial-quote {
+            position: absolute;
+            top: 20px;
+            right: 28px;
+            font-size: 4rem;
+            color: var(--gray-200);
+            font-family: var(--font-heading);
+            line-height: 1;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-dark) 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(212, 168, 67, 0.1), transparent 60%);
+        }
+
+        .cta-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 36px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: var(--off-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .contact-info > p {
+            color: var(--gray-600);
+            margin-bottom: 36px;
+            font-size: 1.05rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .contact-detail-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--green-pale);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-detail h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 4px;
+        }
+
+        .contact-detail p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        .contact-form {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-family: var(--font-body);
+            color: var(--gray-800);
+            background: var(--white);
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--green-deep);
+            box-shadow: 0 0 0 3px rgba(26, 92, 42, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--green-deep);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: var(--font-body);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26, 92, 42, 0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-brand .logo-icon {
+            background: var(--green-light);
+        }
+
+        .footer-brand p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 320px;
+            margin-bottom: 24px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--green-deep);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-column ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-column a {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        .footer-bottom a {
+            color: var(--gold);
+        }
+
+        .footer-bottom a:hover {
+            color: var(--gold-light);
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .steps-grid::before {
+                display: none;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                box-shadow: var(--shadow-xl);
+                transition: var(--transition);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.1rem;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .mobile-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+            }
+
+            .mobile-overlay.active {
+                display: block;
+            }
+
+            .section {
+                padding: 72px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .contact-form {
+                padding: 24px;
+            }
+
+            .testimonial-card {
+                padding: 24px;
+            }
+
+            .service-card {
+                padding: 28px 24px;
+            }
+        }
+    </style>
+</head>
+<body style="">
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#hero" class="logo">
+                <div class="logo-icon">T</div>
+                TURIHO
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#about">About</a>
+                <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#services">Services</a>
+                <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#how-it-works">How It Works</a>
+                <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#testimonials">Testimonials</a>
+                <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="nav-cta">Get Started</a>
+            </div>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Trusted by the Burundian Diaspora</div>
+                <h1>Your Family<br>in Your <span class="highlight">Pocket</span></h1>
+                <p>TURIHO connects diaspora families with trusted, professional representatives on the ground in Burundi — so you can care for your loved ones from anywhere in the world.</p>
+                <div class="hero-buttons">
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="btn btn-primary">Start Your Journey →</a>
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#services" class="btn btn-outline">Explore Services</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="phone-logo">T</div>
+                        <h3>TURIHO</h3>
+                        <p>Your Family in Your Pocket</p>
+                        <div class="phone-features">
+                            <div class="phone-feature">
+                                <div class="phone-feature-icon">👨‍👩‍👧</div>
+                                Family Visits
+                            </div>
+                            <div class="phone-feature">
+                                <div class="phone-feature-icon">🏠</div>
+                                Property Monitoring
+                            </div>
+                            <div class="phone-feature">
+                                <div class="phone-feature-icon">📦</div>
+                                Delivery Services
+                            </div>
+                            <div class="phone-feature">
+                                <div class="phone-feature-icon">📱</div>
+                                Real-time Updates
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card floating-card-1">
+                    <div class="card-icon">✅</div>
+                    <div class="card-title">Visit Completed</div>
+                    <div class="card-text">Mama Rose — Bujumbura</div>
+                </div>
+                <div class="floating-card floating-card-2">
+                    <div class="card-icon">📸</div>
+                    <div class="card-title">Photo Update</div>
+                    <div class="card-text">Family home — Gitega</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in visible">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Families Served</div>
+                </div>
+                <div class="stat-item fade-in visible">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Trusted Agents</div>
+                </div>
+                <div class="stat-item fade-in visible">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Provinces Covered</div>
+                </div>
+                <div class="stat-item fade-in visible">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-in visible">
+                    <div class="about-image-main">
+                        <div class="about-icon">🤝</div>
+                        <h3>"Turiho"</h3>
+                        <p>"We Are There" — Kirundi</p>
+                    </div>
+                    <div class="about-accent"></div>
+                </div>
+                <div class="about-content fade-in visible">
+                    <div class="section-label">About TURIHO</div>
+                    <h2>Bridging Distance with Trust &amp; Care</h2>
+                    <p>TURIHO Ltd is a professional family care and representation service for the Burundian diaspora. Founded in 2024 with headquarters in Bujumbura and management in Stockholm, we act as your trusted physical presence on the ground in Burundi.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">🛡️</div>
+                            <div>
+                                <h4>Trusted &amp; Verified Agents</h4>
+                                <p>Every agent is thoroughly vetted, trained, and monitored to ensure the highest standards of care and professionalism.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">📡</div>
+                            <div>
+                                <h4>Real-Time Communication</h4>
+                                <p>Stay connected with photo updates, reports, and direct communication — all from your phone, wherever you are.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">❤️</div>
+                            <div>
+                                <h4>Family-First Approach</h4>
+                                <p>We treat every family like our own. Your loved ones' wellbeing is our mission, not just a service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="btn btn-green">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header fade-in visible">
+                <div class="section-label">Our Services</div>
+                <h2 class="section-title">Everything Your Family Needs, Handled with Care</h2>
+                <p class="section-subtitle">From family visits to property management, TURIHO provides comprehensive ground services so you can focus on building your life abroad.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in visible">
+                    <div class="service-icon"><span>👨‍👩‍👧</span></div>
+                    <h3>Family Visits</h3>
+                    <p>Regular, scheduled visits to your loved ones with detailed reports and photo updates. We ensure no family member is ever alone.</p>
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card fade-in visible">
+                    <div class="service-icon"><span>🏠</span></div>
+                    <h3>Property Monitoring</h3>
+                    <p>Keep an eye on your homes, land, and investments. Regular inspections with documented reports sent directly to you.</p>
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card fade-in visible">
+                    <div class="service-icon"><span>📦</span></div>
+                    <h3>Delivery Services</h3>
+                    <p>Send groceries, supplies, medication, and gifts to your family. We handle logistics and ensure safe delivery every time.</p>
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card fade-in visible">
+                    <div class="service-icon"><span>🏥</span></div>
+                    <h3>Healthcare Assistance</h3>
+                    <p>Medical appointments accompaniment, pharmacy pickups, and health check coordination for your loved ones on the ground.</p>
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card fade-in visible">
+                    <div class="service-icon"><span>📋</span></div>
+                    <h3>Administrative Support</h3>
+                    <p>Document collection, government office visits, and bureaucratic navigation — we handle the paperwork so you don't have to.</p>
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card fade-in visible">
+                    <div class="service-icon"><span>🎁</span></div>
+                    <h3>Special Occasions</h3>
+                    <p>Birthdays, holidays, celebrations — we organize and deliver special moments to your family, making distance feel smaller.</p>
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="service-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works section" id="how-it-works">
+        <div class="container">
+            <div class="section-header fade-in visible">
+                <div class="section-label">How It Works</div>
+                <h2 class="section-title">Simple Steps to Peace of Mind</h2>
+                <p class="section-subtitle">Getting started with TURIHO is easy. From sign-up to your first service delivery, we keep things transparent and straightforward.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card fade-in visible">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up</h3>
+                    <p>Create your account through WhatsApp or our web platform. Tell us about your family and what you need.</p>
+                </div>
+                <div class="step-card fade-in visible">
+                    <div class="step-number">2</div>
+                    <h3>Get Matched</h3>
+                    <p>We assign a trusted, verified agent in your family's area who understands local needs and speaks your language.</p>
+                </div>
+                <div class="step-card fade-in visible">
+                    <div class="step-number">3</div>
+                    <h3>Request Services</h3>
+                    <p>Request visits, deliveries, monitoring, or any service you need. Everything is coordinated through your phone.</p>
+                </div>
+                <div class="step-card fade-in visible">
+                    <div class="step-number">4</div>
+                    <h3>Stay Connected</h3>
+                    <p>Receive real-time updates, photos, and reports. Know your family is cared for — anytime, from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in visible">
+                <div class="section-label">Testimonials</div>
+                <h2 class="section-title">What Our Families Say</h2>
+                <p class="section-subtitle">Real stories from diaspora families who trust TURIHO with their most precious connections.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in visible">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"Living in Brussels, I always worried about my mother in Bujumbura. TURIHO changed everything. Weekly visits, photo updates, and genuine care — it's like having family looking after family."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JN</div>
+                        <div>
+                            <div class="testimonial-name">Jean-Pierre N.</div>
+                            <div class="testimonial-location">Brussels, Belgium</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in visible">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"The property monitoring service saved me from a land dispute. My agent noticed construction on my plot and alerted me immediately. TURIHO is worth every penny."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MK</div>
+                        <div>
+                            <div class="testimonial-name">Marie Claire K.</div>
+                            <div class="testimonial-location">Stockholm, Sweden</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in visible">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"I send groceries and medication to my children through TURIHO every month. Reliable, affordable, and the agents treat my kids like their own. This service is a blessing."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">PH</div>
+                        <div>
+                            <div class="testimonial-name">Pierre H.</div>
+                            <div class="testimonial-location">Paris, France</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-in visible">
+                <h2>Ready to Keep Your Family Close?</h2>
+                <p>Join hundreds of diaspora families who trust TURIHO for reliable, caring, and professional ground services in Burundi.</p>
+                <div class="cta-buttons">
+                    <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact" class="btn btn-primary">Get Started Today →</a>
+                    <a href="https://wa.me/257XXXXXXXXX" class="btn btn-outline" target="_blank">💬 Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header fade-in visible">
+                <div class="section-label">Contact Us</div>
+                <h2 class="section-title">Let's Start a Conversation</h2>
+                <p class="section-subtitle">Have questions? Ready to get started? Reach out to us through any channel — we're here for you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in visible">
+                    <h3>Get in Touch</h3>
+                    <p>Whether you're a diaspora family looking for services or someone interested in becoming an agent, we'd love to hear from you.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">📍</div>
+                            <div>
+                                <h4>Headquarters</h4>
+                                <p>Bujumbura, Burundi</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">🏢</div>
+                            <div>
+                                <h4>Management</h4>
+                                <p>Stockholm, Sweden</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="" class="__cf_email__" data-cfemail="98f0fdf4f4f7d8ecedeaf1f0f7b6fbf7f5">[email&nbsp;protected]</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">💬</div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+257 XX XXX XXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">🕐</div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Mon — Sat: 8:00 AM — 6:00 PM (EAT)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form fade-in visible">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+32 XXX XX XX XX">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="family-visits">Family Visits</option>
+                                <option value="property-monitoring">Property Monitoring</option>
+                                <option value="delivery">Delivery Services</option>
+                                <option value="healthcare">Healthcare Assistance</option>
+                                <option value="administrative">Administrative Support</option>
+                                <option value="special-occasions">Special Occasions</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="other">Other / General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us how we can help you and your family..." required=""></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Message →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">T</div>
+                        TURIHO
+                    </div>
+                    <p>Professional family care and representation services for the Burundian diaspora. "Your Family in Your Pocket" — we're there when it matters most.</p>
+                    <div class="footer-social">
+                        <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#" aria-label="Facebook">📘</a>
+                        <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#" aria-label="WhatsApp">💬</a>
+                        <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#" aria-label="Instagram">📷</a>
+                        <a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#services">Family Visits</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#services">Property Monitoring</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#services">Delivery Services</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#services">Healthcare Assistance</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#services">Administrative Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#about">About Us</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#how-it-works">How It Works</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#testimonials">Testimonials</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#contact">Contact</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#">Privacy Policy</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#">Terms of Service</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#">Cookie Policy</a></li>
+                        <li><a href="blob:https://arena.ai/bac00540-f0ed-475f-a16b-6458ce798fd4#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024–2026 TURIHO Ltd (Sarl). All rights reserved.</p>
+                <p>Made with ❤️ for the Burundian diaspora</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src=""></script><script>
+        // ===== NAVBAR SCROLL EFFECT =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ===== MOBILE MENU =====
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileOverlay.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ===== SCROLL ANIMATIONS =====
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // ===== CONTACT FORM =====
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+
+            // For now, show a success message
+            // In production, you'd send this to your backend or a service like Formspree
+            const submitBtn = contactForm.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '✓ Message Sent!';
+            submitBtn.style.background = '#2d7a3f';
+
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+                contactForm.reset();
+            }, 3000);
+
+            // To make this form actually work, integrate with:
+            // 1. Formspree (free): action="https://formspree.io/f/YOUR_ID" method="POST"
+            // 2. Netlify Forms: add netlify attribute to form
+            // 3. Google Sheets via Apps Script
+            console.log('Form submission:', data);
+        });
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a11d84a4ede2a106',t:'MTc4MjQ5MDYwNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;"></iframe>
+
+</body></html>
